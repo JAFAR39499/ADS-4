@@ -37,11 +37,10 @@ int countPairs2(int* arr, int len, int value) {
 }
 
 int findMatches(int* array, int start, int end, int target) {
-  int matches = 0;
   while (start <= end) {
     int mid = start + (end - start) / 2;
     if (array[mid] == target) {
-      matches = 1;
+      int matches = 1;
       int left = mid - 1;
       while (left >= start && array[left] == target) {
         matches++;
